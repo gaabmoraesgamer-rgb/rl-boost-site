@@ -8,7 +8,7 @@
 <style>
 body{
     margin:0;
-    font-family: Arial;
+    font-family:Arial;
     background:#0f172a;
     color:white;
 }
@@ -23,13 +23,12 @@ header{
 /* MENU */
 .container{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap:30px;
-    padding:30px;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    padding:25px;
 }
 
 .card{
-    background:#1e293b;
     border-radius:20px;
     overflow:hidden;
     cursor:pointer;
@@ -37,7 +36,7 @@ header{
 
 .card img{
     width:100%;
-    height:200px;
+    height:220px;
     object-fit:cover;
     display:block;
 }
@@ -54,10 +53,10 @@ header{
 
 .page img{
     width:100%;
-    max-height:450px;
+    height:400px;
     object-fit:cover;
     border-radius:15px;
-    margin:50px 0;
+    margin:60px 0;
     display:block;
 }
 
@@ -78,15 +77,15 @@ header{
 <div class="container">
 
 <div class="card" onclick="openPage('v1')">
-<img src="https://store.epicgames.com/images/offer/rocketleague/rocket-league-home.jpg">
+<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
 </div>
 
 <div class="card" onclick="openPage('v2')">
-<img src="https://www.rocketleague.com/images/keyart/rl_evergreen.jpg">
+<img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf">
 </div>
 
 <div class="card" onclick="openPage('v3')">
-<img src="https://www.gamereactor.pt/media/62/rocketleague_3626273b.jpg">
+<img src="https://images.unsplash.com/photo-1627856014754-3f9c8c9c0a76">
 </div>
 
 </div>
@@ -96,29 +95,29 @@ header{
 <div id="v1" class="page">
 <div class="back" onclick="goBack()">⬅ Voltar</div>
 
-<img src="https://store.epicgames.com/images/offer/rocketleague/rocket-league-home.jpg">
+<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
 
-<p>Se você quer evoluir no 1v1 do Rocket League, a primeira coisa que precisa entender é que esse modo é completamente diferente do 2v2. No 1v1, qualquer erro é praticamente um gol contra...</p>
+<p>Se você quer evoluir no 1v1 do Rocket League, a primeira coisa que precisa entender é que esse modo é completamente diferente do 2v2. No 1v1, qualquer erro é praticamente um gol contra, então o jogo fica muito mais mental do que mecânico. Você não pode simplesmente confiar no seu teammate para cobrir seus erros, então cada decisão precisa ser mais pensada. Isso significa que jogar seguro muitas vezes é melhor do que tentar algo muito arriscado, principalmente se você ainda está desenvolvendo consistência.</p>
 
-<p>Uma das dicas mais importantes é aprender controle de bola...</p>
+<p>Uma das dicas mais importantes é aprender controle de bola. No 1v1, quem controla o ritmo da partida geralmente vence, e isso vem de saber driblar, carregar a bola no carro e fazer jogadas simples, mas eficientes. Não precisa fazer freestyle absurdo, mas precisa conseguir manter a posse. Treinar dribles no chão e no ar vai te dar uma vantagem absurda contra jogadores que só sabem chutar a bola pra frente.</p>
 
-<img src="https://www.rocketleague.com/images/keyart/rl_evergreen.jpg">
+<img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf">
 
-<p>Outra coisa essencial é saber quando desafiar o adversário...</p>
+<p>Outra coisa essencial é saber quando desafiar o adversário. Muita gente perde no 1v1 porque dá challenge em tudo. Você precisa observar o oponente: ele tá com controle da bola ou só deu um toque forte? Se ele tá sem controle, é hora de pressionar. Se ele tá confortável, talvez seja melhor recuar e esperar o erro. Paciência é literalmente uma habilidade nesse modo.</p>
 
-<p>O posicionamento também faz toda a diferença...</p>
+<p>O posicionamento também faz toda a diferença. Ficar muito avançado pode parecer agressivo, mas te deixa vulnerável a um flick ou um toque por cima. Por outro lado, ficar muito recuado dá espaço demais pro adversário criar jogadas. O ideal é manter uma distância segura, onde você consegue reagir tanto a um chute quanto a um drible.</p>
 
-<p>Gerenciamento de boost é outro ponto crucial...</p>
+<p>Gerenciamento de boost é outro ponto crucial. No 1v1, pegar boost grande nem sempre é a melhor escolha, porque pode te tirar da jogada. Muitas vezes, pegar pads pequenos e manter pressão é mais eficiente. Jogadores bons conseguem jogar praticamente sem boost porque sabem se posicionar bem e usar o momentum do carro.</p>
 
-<p>Agora falando de ataque, simplifique...</p>
+<p>Agora falando de ataque, simplifique. No 1v1, menos é mais. Jogadas diretas como hook shots, powershots e flicks são muito mais eficientes do que tentar algo complexo.</p>
 
-<p>Defesa no 1v1 é quase uma arte...</p>
+<p>Defesa no 1v1 é quase uma arte. Você precisa aprender a shadow defense.</p>
 
-<p>Outro ponto importante é o psicológico...</p>
+<p>Outro ponto importante é o psicológico.</p>
 
-<p>Replay também ajuda demais...</p>
+<p>Replay também ajuda demais.</p>
 
-<p>Por fim, constância...</p>
+<p>Por fim, constância.</p>
 
 </div>
 
@@ -126,31 +125,29 @@ header{
 <div id="v3" class="page">
 <div class="back" onclick="goBack()">⬅ Voltar</div>
 
-<img src="https://www.gamereactor.pt/media/62/rocketleague_3626273b.jpg">
+<img src="https://images.unsplash.com/photo-1627856014754-3f9c8c9c0a76">
 
-<p>Se você quer evoluir no 3v3 do Rocket League, precisa entender que esse modo é o mais tático de todos...</p>
+<p>Se você quer evoluir no 3v3 do Rocket League, precisa entender que esse modo é o mais tático de todos. Aqui, a mecânica ajuda, mas o que realmente decide partidas é posicionamento, rotação e leitura coletiva do jogo.</p>
 
-<img src="https://jogandocasualmente.com.br/wp-content/uploads/2020/09/rocket-league-free-to-play.jpg">
+<img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf">
 
 <p>A base do 3v3 é a rotação em três jogadores...</p>
 
 <p>Saber qual é o seu papel...</p>
 
-<p>Rotação no 3v3 não é só girar...</p>
+<p>Rotação correta é essencial...</p>
 
-<p>Outro ponto importante é evitar double commit...</p>
+<p>Evitar double commit...</p>
 
-<p>No 3v3, você não precisa estar toda hora na bola...</p>
+<p>Pressão ofensiva...</p>
 
-<p>A pressão ofensiva também é diferente...</p>
+<p>Defesa organizada...</p>
 
-<p>Defensivamente, organização é tudo...</p>
+<p>Controle de boost coletivo...</p>
 
-<p>O controle de boost também é coletivo...</p>
+<p>Mentalidade...</p>
 
-<p>Mentalidade aqui também muda bastante...</p>
-
-<p>Por fim, consistência e disciplina...</p>
+<p>Consistência...</p>
 
 </div>
 
