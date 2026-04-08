@@ -4,19 +4,73 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RL Boost</title>
+
 <style>
-body {margin:0;font-family:Arial;background:#0f172a;color:white;}
-header {text-align:center;padding:20px;font-size:32px;font-weight:bold;}
-.container {display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;padding:30px;}
-.card {background:#1e293b;border-radius:20px;overflow:hidden;cursor:pointer;transition:0.3s;}
-.card:hover {transform:scale(1.05);}
-.card img {width:100%;height:220px;object-fit:cover;}
-.card h3 {text-align:center;padding:15px;}
-.page {display:none;max-width:900px;margin:auto;padding:40px;font-size:18px;line-height:1.9;}
-.page img {width:100%;border-radius:15px;margin:40px 0;}
-.back {cursor:pointer;color:#22c55e;margin-bottom:20px;display:inline-block;}
+body {
+    margin:0;
+    font-family: Arial;
+    background:#0f172a;
+    color:white;
+}
+
+header {
+    text-align:center;
+    padding:20px;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.container {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:30px;
+    padding:30px;
+}
+
+.card {
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.card img {
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3 {
+    text-align:center;
+    padding:15px;
+}
+
+.page {
+    display:none;
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+    font-size:18px;
+    line-height:2;
+}
+
+.page img {
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    border-radius:15px;
+    margin:50px 0;
+}
+
+.back {
+    cursor:pointer;
+    color:#22c55e;
+    margin-bottom:20px;
+    display:inline-block;
+}
 </style>
 </head>
+
 <body>
 
 <header>RL Boost ⚽</header>
@@ -30,7 +84,7 @@ header {text-align:center;padding:20px;font-size:32px;font-weight:bold;}
 </div>
 
 <div class="card" onclick="openPage('v2')">
-<img src="https://cdn2.unrealengine.com/rl-f2p-launch-1920x1080-1920x1080-190b7f5f3f65.jpg">
+<img src="https://www.rocketleague.com/images/keyart/rl_evergreen.jpg">
 <h3>2v2</h3>
 </div>
 
@@ -42,62 +96,96 @@ header {text-align:center;padding:20px;font-size:32px;font-weight:bold;}
 </div>
 </div>
 
+<!-- 1v1 -->
 <div id="v1" class="page">
 <div class="back" onclick="goBack()">⬅ Voltar</div>
 <h2>Guia Completo 1v1</h2>
+
 <img src="https://store.epicgames.com/images/offer/rocketleague/rocket-league-home.jpg">
+
 <p>Se você quer evoluir no 1v1 do Rocket League, a primeira coisa que precisa entender é que esse modo é completamente diferente do 2v2. No 1v1, qualquer erro é praticamente um gol contra, então o jogo fica muito mais mental do que mecânico. Você não pode simplesmente confiar no seu teammate para cobrir seus erros, então cada decisão precisa ser mais pensada. Isso significa que jogar seguro muitas vezes é melhor do que tentar algo muito arriscado, principalmente se você ainda está desenvolvendo consistência.</p>
+
 <p>Uma das dicas mais importantes é aprender controle de bola. No 1v1, quem controla o ritmo da partida geralmente vence, e isso vem de saber driblar, carregar a bola no carro e fazer jogadas simples, mas eficientes. Não precisa fazer freestyle absurdo, mas precisa conseguir manter a posse. Treinar dribles no chão e no ar vai te dar uma vantagem absurda contra jogadores que só sabem chutar a bola pra frente.</p>
-<img src="https://cdn2.unrealengine.com/rl-f2p-launch-1920x1080-1920x1080-190b7f5f3f65.jpg">
+
+<img src="https://www.rocketleague.com/images/keyart/rl_evergreen.jpg">
+
 <p>Outra coisa essencial é saber quando desafiar o adversário. Muita gente perde no 1v1 porque dá challenge em tudo. Você precisa observar o oponente: ele tá com controle da bola ou só deu um toque forte? Se ele tá sem controle, é hora de pressionar. Se ele tá confortável, talvez seja melhor recuar e esperar o erro. Paciência é literalmente uma habilidade nesse modo.</p>
+
 <p>O posicionamento também faz toda a diferença. Ficar muito avançado pode parecer agressivo, mas te deixa vulnerável a um flick ou um toque por cima. Por outro lado, ficar muito recuado dá espaço demais pro adversário criar jogadas. O ideal é manter uma distância segura, onde você consegue reagir tanto a um chute quanto a um drible.</p>
+
 <p>Gerenciamento de boost é outro ponto crucial. No 1v1, pegar boost grande nem sempre é a melhor escolha, porque pode te tirar da jogada. Muitas vezes, pegar pads pequenos e manter pressão é mais eficiente. Jogadores bons conseguem jogar praticamente sem boost porque sabem se posicionar bem e usar o momentum do carro.</p>
-<p>Agora falando de ataque, simplifique. No 1v1, menos é mais. Jogadas diretas como hook shots, powershots e flicks são muito mais eficientes do que tentar algo complexo. Se você perceber que o adversário está longe do gol, aproveite para chutar direto. Não precisa enfeitar.</p>
-<p>Defesa no 1v1 é quase uma arte. Você precisa aprender a “shadow defense”, que é basicamente acompanhar o adversário voltando para o gol enquanto espera o momento certo de dar o bote. Isso evita que você seja facilmente driblado e te dá mais chances de roubar a bola.</p>
-<p>Outro ponto importante é o psicológico. Você vai tomar gol bobo e errar, e isso é normal. O segredo é manter a calma e continuar jogando focado. Jogadores que mantêm a calma sob pressão sempre têm vantagem.</p>
-<p>Replay também ajuda demais. Assista suas partidas e identifique erros. Pequenos ajustes fazem grande diferença.</p>
-<p>Por fim, constância. Esse modo é desconfortável, mas é o que mais faz evoluir.</p>
+
+<p>Agora falando de ataque, simplifique. No 1v1, menos é mais. Jogadas diretas como hook shots, powershots e flicks são muito mais eficientes do que tentar algo complexo.</p>
+
+<p>Defesa no 1v1 é quase uma arte. Você precisa aprender a shadow defense para evitar ser driblado.</p>
+
+<p>Outro ponto importante é o psicológico. Você vai errar e tomar gols bobos. O segredo é manter a calma.</p>
+
+<p>Replay também ajuda demais. Corrigir erros faz muita diferença.</p>
+
+<p>Por fim, constância. Esse modo é o que mais faz evoluir.</p>
+
 </div>
 
+<!-- 2v2 -->
 <div id="v2" class="page">
 <div class="back" onclick="goBack()">⬅ Voltar</div>
 <h2>Guia Completo 2v2</h2>
+
 <img src="https://www.fortnite.com/images/creative/4372-0981-2351.jpg">
-<p>Se você quer evoluir no 2v2 do Rocket League, a primeira coisa que precisa entender é que esse modo é o equilíbrio perfeito entre mecânica e jogo em equipe. Cada decisão impacta diretamente o resultado.</p>
-<p>A rotação é essencial. Um pressiona e o outro cobre. Jogar fora de posição causa gols.</p>
+
+<p>Se você quer evoluir no 2v2 do Rocket League, a primeira coisa que precisa entender é que esse modo é o equilíbrio perfeito entre mecânica e jogo em equipe.</p>
+
+<p>A rotação é essencial. Um pressiona e o outro cobre.</p>
+
 <img src="https://www.rocketleague.com/images/keyart/rl_evergreen.jpg">
-<p>Saber jogar como primeiro e segundo homem muda completamente o nível do seu jogo. Pressione quando necessário e tenha calma quando for o último.</p>
-<p>Comunicação indireta é feita pelo posicionamento. Confiança é chave.</p>
-<p>Pressão constante mantém o adversário preso e aumenta suas chances.</p>
-<p>Dominar 50/50 é essencial e subestimado.</p>
-<p>Controle de boost ajuda muito na consistência.</p>
-<p>Ofensivamente, jogue simples e use passes.</p>
-<p>Defensivamente, use back post e evite double commit.</p>
-<p>Mentalidade: pare de culpar teammate e foque em você.</p>
-<p>Adaptação ao estilo do parceiro é o diferencial.</p>
+
+<p>Saber jogar como primeiro e segundo homem muda tudo.</p>
+<p>Comunicação é pelo posicionamento.</p>
+<p>Pressão constante é essencial.</p>
+<p>Dominar 50/50 ajuda muito.</p>
+<p>Controle de boost importa.</p>
+<p>Ofensivamente, jogue simples.</p>
+<p>Defensivamente, use back post.</p>
+<p>Não culpe teammate.</p>
+<p>Adaptação é tudo.</p>
+
 </div>
 
+<!-- 3v3 -->
 <div id="v3" class="page">
 <div class="back" onclick="goBack()">⬅ Voltar</div>
 <h2>Guia Completo 3v3</h2>
+
 <img src="https://www.gamereactor.pt/media/62/rocketleague_3626273b.jpg">
-<p>Se você quer evoluir no 3v3, precisa entender que esse modo é o mais tático. Posicionamento e rotação são tudo.</p>
-<p>A rotação em três jogadores define o jogo. Primeiro pressiona, segundo apoia e terceiro defende.</p>
+
+<p>Se você quer evoluir no 3v3, precisa entender que é o modo mais tático.</p>
+
 <img src="https://jogandocasualmente.com.br/wp-content/uploads/2020/09/rocket-league-free-to-play.jpg">
-<p>Saber seu papel evita erros graves. Terceiro homem nunca pode vacilar.</p>
-<p>Rotação correta pelo back post evita caos.</p>
-<p>Evite double e triple commit.</p>
-<p>Não precisa tocar toda hora na bola, mas tocar bem.</p>
-<p>Pressão ofensiva é coletiva, não individual.</p>
-<p>Defesa precisa de organização constante.</p>
-<p>Controle de boost é coletivo.</p>
-<p>Mentalidade: foco no seu jogo.</p>
-<p>Consistência e disciplina fazem você subir de rank.</p>
+
+<p>Rotação em três jogadores é essencial.</p>
+<p>Evite double commit.</p>
+<p>Posicionamento é tudo.</p>
+<p>Não precisa jogar bonito, jogue certo.</p>
+<p>Pressão ofensiva é coletiva.</p>
+<p>Defesa organizada.</p>
+<p>Controle de boost em equipe.</p>
+<p>Mentalidade correta.</p>
+<p>Consistência faz subir de rank.</p>
+
 </div>
 
 <script>
-function openPage(id){document.getElementById('menu').style.display='none';document.querySelectorAll('.page').forEach(p=>p.style.display='none');document.getElementById(id).style.display='block';}
-function goBack(){document.getElementById('menu').style.display='block';document.querySelectorAll('.page').forEach(p=>p.style.display='none');}
+function openPage(id){
+document.getElementById("menu").style.display="none";
+document.querySelectorAll(".page").forEach(p=>p.style.display="none");
+document.getElementById(id).style.display="block";
+}
+
+function goBack(){
+document.getElementById("menu").style.display="block";
+document.querySelectorAll(".page").forEach(p=>p.style.display="none");
+}
 </script>
 
 </body>
