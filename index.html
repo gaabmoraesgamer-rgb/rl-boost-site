@@ -3,105 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RL Boost - Dicas e Treinos</title>
+    <title>RL Boost Zone | Menu</title>
     <style>
         :root {
-            --primary: #00fe87;
-            --secondary: #02e2ff;
-            --bg: #0b0e14;
-            --card: #161b22;
+            --bg-color: #0d1117;
+            --card-color: #161b22;
+            --accent-color: #00d4ff;
+            --text-color: #ffffff;
         }
+
         body {
-            background-color: var(--bg);
-            color: white;
-            font-family: 'Segoe UI', sans-serif;
-            text-align: center;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Roboto, sans-serif;
             margin: 0;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .container { max-width: 600px; margin: auto; }
-        h1 { color: var(--primary); text-transform: uppercase; letter-spacing: 2px; }
-        .card {
-            background: var(--card);
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 20px;
-            border: 1px solid #30363d;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
-        button {
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            color: #000;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
+
+        h1 { margin-bottom: 30px; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Grade das Abas */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
             width: 100%;
-            font-size: 16px;
+            max-width: 1000px;
         }
-        button:hover { transform: scale(1.05); opacity: 0.9; }
-        .result {
-            margin-top: 15px;
-            padding: 10px;
-            background: rgba(0,0,0,0.3);
-            border-radius: 8px;
-            color: var(--secondary);
-            font-weight: bold;
+
+        /* Estilo das Abas Quadradas */
+        .aba-card {
+            background-color: var(--card-color);
+            border-radius: 20px; /* Bordas arredondadas que você pediu */
+            overflow: hidden;
+            border: 1px solid #30363d;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
         }
-        .footer { font-size: 12px; color: #8b949e; margin-top: 40px; }
+
+        .aba-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2);
+        }
+
+        /* Espaço para a Capa que você vai mandar */
+        .capa-foto {
+            width: 100%;
+            height: 150px;
+            background-color: #21262d; /* Cor provisória */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .conteudo-card {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .conteudo-card h2 { margin: 0; font-size: 1.5rem; }
+        .conteudo-card p { color: #8b949e; font-size: 0.9rem; margin-top: 10px; }
+
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>🚀 RL Boost Zone</h1>
-    <p>Domine o campo e saia do Platina hoje!</p>
+    <h1>Rocket League Pro Tips</h1>
 
-    <div class="card">
-        <h3>🎯 Gerador de Treino Diário</h3>
-        <p>Clique para receber um foco de treino personalizado:</p>
-        <button onclick="gerarTreino()">GERAR MEU TREINO</button>
-        <div id="resTreino" class="result">Aguardando...</div>
+    <div class="grid-container">
+        
+        <a href="1v1.html" class="aba-card">
+            <div class="capa-foto" style="background-image: url('URL_DA_SUA_FOTO_AQUI');"></div>
+            <div class="conteudo-card">
+                <h2>Dicas de 1v1</h2>
+                <p>Aprenda controle de bola e 50/50.</p>
+            </div>
+        </a>
+
+        <a href="2v2.html" class="aba-card">
+            <div class="capa-foto" style="background-image: url('URL_DA_SUA_FOTO_AQUI');"></div>
+            <div class="conteudo-card">
+                <h2>Dicas de 2v2</h2>
+                <p>Posicionamento e rotação com parceiro.</p>
+            </div>
+        </a>
+
+        <a href="treinos.html" class="aba-card">
+            <div class="capa-foto" style="background-image: url('URL_DA_SUA_FOTO_AQUI');"></div>
+            <div class="conteudo-card">
+                <h2>Packs de Treino</h2>
+                <p>Os melhores códigos para evoluir rápido.</p>
+            </div>
+        </a>
+
     </div>
-
-    <div class="card">
-        <h3>📊 Calculadora de Progresso</h3>
-        <p>Quantas vitórias seguidas você teve hoje?</p>
-        <input type="number" id="vitorias" placeholder="Ex: 5" style="padding: 10px; border-radius: 5px; width: 80%; border: none; margin-bottom: 10px;">
-        <button onclick="calcRank()">CALCULAR MMR ESTIMADO</button>
-        <div id="resRank" class="result">Aguardando...</div>
-    </div>
-
-    <div class="footer">
-        <p>Dica: Poste seu resultado no TikTok e marque #RocketLeagueBrasil</p>
-    </div>
-</div>
-
-<script>
-    function gerarTreino() {
-        const treinos = [
-            "30 min: Half-flip e Recovery no Freeplay",
-            "15 min: Chutes de precisão (Custom Training)",
-            "20 min: Defesa de teto e Saves rápidos",
-            "Apenas 1v1 hoje: Foco em controle de bola",
-            "Treino de Wall Shots: Use as paredes a seu favor"
-        ];
-        const random = treinos[Math.floor(Math.random() * treinos.length)];
-        document.getElementById('resTreino').innerText = random;
-    }
-
-    function calcRank() {
-        const v = document.getElementById('vitorias').value;
-        if(v > 0) {
-            const mmr = v * 9;
-            document.getElementById('resRank').innerText = `Você ganhou aprox. +${mmr} de MMR!`;
-        } else {
-            document.getElementById('resRank').innerText = "Insira um número válido!";
-        }
-    }
-</script>
 
 </body>
 </html>
