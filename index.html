@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RL Boost - Dicas de Rocket League</title>
+<style>
+body {font-family: Arial; background:#0f172a; color:white; text-align:center;}
+header {padding:20px; font-size:28px; font-weight:bold;}
+.card {background:#1e293b; margin:20px; padding:20px; border-radius:15px;}
+button {padding:10px 20px; border:none; border-radius:10px; background:#22c55e; color:white; cursor:pointer;}
+input {padding:10px; border-radius:10px; border:none;}
+</style>
+</head>
+<body>
+
+<header>RL Boost ⚽</header>
+
+<div class="card">
+<h2>Gerador de Nick Rocket League</h2>
+<input type="text" id="nome" placeholder="Seu nome">
+<button onclick="gerarNick()">Gerar Nick</button>
+<p id="nick"></p>
+</div>
+
+<div class="card">
+<h2>Dica Aleatória</h2>
+<button onclick="dica()">Mostrar Dica</button>
+<p id="dica"></p>
+</div>
+
+<div class="card">
+<h2>Treino Diário</h2>
+<button onclick="treino()">Gerar Treino</button>
+<p id="treino"></p>
+</div>
+
+<script>
+function gerarNick(){
+let nome = document.getElementById("nome").value;
+let lista = [
+"Pro_"+nome,
+nome+"RL",
+"Fast_"+nome,
+nome+"Flip",
+"Dark_"+nome
+];
+document.getElementById("nick").innerText = lista[Math.floor(Math.random()*lista.length)];
+}
+
+function dica(){
+let dicas = [
+"Treine aerial todos os dias",
+"Não dê commit duplo",
+"Aprenda shadow defense",
+"Controle o boost",
+"Rotação é mais importante que mecânica"
+];
+document.getElementById("dica").innerText = dicas[Math.floor(Math.random()*dicas.length)];
+}
+
+function treino(){
+let treinos = [
+"10 min freeplay + 10 aerial",
+"Treinar drible 15 min",
+"Treinar defesa 10 min",
+"Treinar speed flip",
+"Treinar recuperação no chão"
+];
+document.getElementById("treino").innerText = treinos[Math.floor(Math.random()*treinos.length)];
+}
+</script>
+
+</body>
+</html>
