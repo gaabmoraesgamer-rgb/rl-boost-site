@@ -20,6 +20,7 @@ header{
     font-weight:bold;
 }
 
+/* MENU */
 .container{
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -32,24 +33,16 @@ header{
     border-radius:20px;
     overflow:hidden;
     cursor:pointer;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:scale(1.05);
 }
 
 .card img{
     width:100%;
-    height:220px;
+    height:200px;
     object-fit:cover;
+    display:block;
 }
 
-.card h3{
-    text-align:center;
-    padding:15px;
-}
-
+/* PÁGINAS */
 .page{
     display:none;
     max-width:900px;
@@ -61,10 +54,11 @@ header{
 
 .page img{
     width:100%;
-    height:400px;
+    max-height:450px;
     object-fit:cover;
     border-radius:15px;
-    margin:60px 0;
+    margin:50px 0;
+    display:block;
 }
 
 .back{
@@ -72,7 +66,6 @@ header{
     color:#22c55e;
     margin-bottom:20px;
     display:inline-block;
-    font-size:18px;
 }
 </style>
 </head>
@@ -86,95 +79,78 @@ header{
 
 <div class="card" onclick="openPage('v1')">
 <img src="https://store.epicgames.com/images/offer/rocketleague/rocket-league-home.jpg">
-<h3>1v1</h3>
 </div>
 
 <div class="card" onclick="openPage('v2')">
 <img src="https://www.rocketleague.com/images/keyart/rl_evergreen.jpg">
-<h3>2v2</h3>
 </div>
 
 <div class="card" onclick="openPage('v3')">
 <img src="https://www.gamereactor.pt/media/62/rocketleague_3626273b.jpg">
-<h3>3v3</h3>
 </div>
 
 </div>
 </div>
 
-<!-- 1v1 (mantive igual como você pediu) -->
+<!-- 1v1 -->
 <div id="v1" class="page">
 <div class="back" onclick="goBack()">⬅ Voltar</div>
-<h2>Guia Completo 1v1</h2>
 
 <img src="https://store.epicgames.com/images/offer/rocketleague/rocket-league-home.jpg">
 
-<p>Seu texto de 1v1 já está correto 👍</p>
-</div>
+<p>Se você quer evoluir no 1v1 do Rocket League, a primeira coisa que precisa entender é que esse modo é completamente diferente do 2v2. No 1v1, qualquer erro é praticamente um gol contra...</p>
 
-<!-- 2v2 -->
-<div id="v2" class="page">
-<div class="back" onclick="goBack()">⬅ Voltar</div>
-<h2>Guia Completo 2v2</h2>
+<p>Uma das dicas mais importantes é aprender controle de bola...</p>
 
 <img src="https://www.rocketleague.com/images/keyart/rl_evergreen.jpg">
 
-<p>Se você quer evoluir no 2v2 do Rocket League, a primeira coisa que precisa entender é que esse modo é o equilíbrio perfeito entre mecânica e jogo em equipe. Diferente do 1v1, você não joga sozinho, mas também não pode depender totalmente do seu teammate. Cada decisão sua impacta diretamente o resultado, então consistência e leitura de jogo são fundamentais.</p>
+<p>Outra coisa essencial é saber quando desafiar o adversário...</p>
 
-<p>Uma das coisas mais importantes no 2v2 é a rotação. Não adianta nada você ser mecânico se vive fora de posição. A base do 2v2 é simples: um pressiona a jogada enquanto o outro cobre. Quando você vai para a bola, seu teammate precisa estar atrás pronto pra reagir. Quando você sai da jogada, precisa rotacionar rápido e dar espaço. Rotação errada é uma das maiores causas de gol sofrido nesse modo.</p>
+<p>O posicionamento também faz toda a diferença...</p>
 
-<p>Outro ponto essencial é saber jogar como primeiro e segundo homem. Como primeiro homem, sua função é pressionar, forçar erro ou tirar a bola do controle do adversário. Você não precisa sempre ganhar a jogada, só precisa dificultar. Já como segundo homem, você precisa ter mais calma: ler a jogada, estar bem posicionado e pronto pra defender ou finalizar.</p>
+<p>Gerenciamento de boost é outro ponto crucial...</p>
 
-<img src="https://www.rocketleague.com/images/keyart/rl_evergreen.jpg">
+<p>Agora falando de ataque, simplifique...</p>
 
-<p>A comunicação também faz diferença, mesmo sem voice. Você “fala” com seu teammate através do seu posicionamento. Se você avança sem parar, você basicamente obriga ele a ficar na defesa. Se você rotaciona bem e dá espaço, o jogo flui melhor.</p>
+<p>Defesa no 1v1 é quase uma arte...</p>
 
-<p>Pressão constante é o que separa jogadores medianos de bons no 2v2. Não é sobre dar boost e sair voando em tudo, mas sim manter a bola no campo adversário.</p>
+<p>Outro ponto importante é o psicológico...</p>
 
-<p>Falando em 50/50, dominar isso é essencial. Muitas vezes você não precisa fazer uma jogada bonita, só precisa ganhar ou neutralizar o contato.</p>
+<p>Replay também ajuda demais...</p>
 
-<p>O controle de boost também entra forte no 2v2. Saber jogar com pouco boost e pegar pads pequenos te mantém ativo na jogada.</p>
-
-<p>Na parte ofensiva, jogar simples continua sendo o melhor caminho. Passes são extremamente fortes no 2v2.</p>
-
-<p>Defensivamente, a rotação pelo back post é obrigatória. Saber quando dar challenge e quando esperar é crucial.</p>
-
-<p>Agora sobre mental: culpar o teammate é a forma mais rápida de não evoluir.</p>
-
-<p>Por fim, constância e adaptação. Cada partida é diferente.</p>
+<p>Por fim, constância...</p>
 
 </div>
 
 <!-- 3v3 -->
 <div id="v3" class="page">
 <div class="back" onclick="goBack()">⬅ Voltar</div>
-<h2>Guia Completo 3v3</h2>
 
 <img src="https://www.gamereactor.pt/media/62/rocketleague_3626273b.jpg">
 
-<p>Se você quer evoluir no 3v3 do Rocket League, precisa entender que esse modo é o mais tático de todos. Aqui, a mecânica ajuda, mas o que realmente decide partidas é posicionamento, rotação e leitura coletiva do jogo.</p>
-
-<p>A base do 3v3 é a rotação em três jogadores: primeiro homem pressiona, segundo dá suporte e terceiro fica mais recuado garantindo a defesa.</p>
+<p>Se você quer evoluir no 3v3 do Rocket League, precisa entender que esse modo é o mais tático de todos...</p>
 
 <img src="https://jogandocasualmente.com.br/wp-content/uploads/2020/09/rocket-league-free-to-play.jpg">
 
-<p>Saber qual é o seu papel em cada momento da jogada é essencial.</p>
+<p>A base do 3v3 é a rotação em três jogadores...</p>
 
-<p>Rotação no 3v3 não é só “girar”, é girar certo.</p>
+<p>Saber qual é o seu papel...</p>
 
-<p>Outro ponto importante é evitar o double commit.</p>
+<p>Rotação no 3v3 não é só girar...</p>
 
-<p>No 3v3, você não precisa estar toda hora na bola.</p>
+<p>Outro ponto importante é evitar double commit...</p>
 
-<p>A pressão ofensiva também é diferente.</p>
+<p>No 3v3, você não precisa estar toda hora na bola...</p>
 
-<p>Defensivamente, organização é tudo.</p>
+<p>A pressão ofensiva também é diferente...</p>
 
-<p>O controle de boost é coletivo.</p>
+<p>Defensivamente, organização é tudo...</p>
 
-<p>Mentalidade aqui também muda bastante.</p>
+<p>O controle de boost também é coletivo...</p>
 
-<p>Por fim, consistência e disciplina.</p>
+<p>Mentalidade aqui também muda bastante...</p>
+
+<p>Por fim, consistência e disciplina...</p>
 
 </div>
 
