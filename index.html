@@ -8,10 +8,11 @@
 body {font-family: Arial; background:#0f172a; color:white; margin:0;}
 header {padding:20px; font-size:28px; text-align:center; font-weight:bold;}
 .container {display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:25px; padding:30px;}
-.card {background:#1e293b; padding:50px 20px; border-radius:20px; cursor:pointer; transition:0.3s; text-align:center;}
+.card {background:#1e293b; padding:40px 20px; border-radius:20px; cursor:pointer; transition:0.3s; text-align:center;}
 .card:hover {transform:scale(1.08); background:#334155;}
-.card img {width:80px; margin-bottom:15px;}
+.card img {width:100%; height:120px; object-fit:cover; border-radius:10px; margin-bottom:10px;}
 .page {display:none; padding:40px; max-width:900px; margin:auto; line-height:1.8;}
+.page img {width:100%; border-radius:10px; margin:20px 0;}
 .back {margin-bottom:20px; display:inline-block; cursor:pointer; color:#22c55e;}
 </style>
 </head>
@@ -24,89 +25,76 @@ header {padding:20px; font-size:28px; text-align:center; font-weight:bold;}
 <div class="container">
 
 <div class="card" onclick="abrir('v1')">
-<img src="https://cdn-icons-png.flaticon.com/512/833/833472.png">
+<img src="https://img.youtube.com/vi/IjVMZaXXDEM/maxresdefault.jpg">
 <h3>1v1</h3>
 </div>
 
 <div class="card" onclick="abrir('v2')">
-<img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png">
+<img src="https://rocketleague.media.zestyio.com/rl_s4_2v2.jpg">
 <h3>2v2</h3>
 </div>
 
 <div class="card" onclick="abrir('v3')">
-<img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png">
+<img src="https://matcherino.com/assets/images/og-image.png">
 <h3>3v3</h3>
 </div>
 
 <div class="card" onclick="abrir('flick')">
-<img src="https://cdn-icons-png.flaticon.com/512/2972/2972185.png">
+<img src="https://img.youtube.com/vi/jVzlmApbD8M/maxresdefault.jpg">
 <h3>Flick</h3>
 </div>
 
 <div class="card" onclick="abrir('aereo')">
-<img src="https://cdn-icons-png.flaticon.com/512/854/854878.png">
+<img src="https://bo3.gg/uploads/articles/rocket-league-cars.jpg">
 <h3>Aéreo</h3>
 </div>
 
 </div>
 </div>
 
-<!-- PÁGINAS -->
-
 <div id="v1" class="page">
 <div class="back" onclick="voltar()">⬅ Voltar</div>
 <h2>Guia Completo 1v1</h2>
-<p>No modo 1v1, o foco principal é consistência e controle emocional. Diferente dos outros modos, qualquer erro seu vira uma chance clara de gol para o adversário. Por isso, jogar com calma é essencial. Evite gastar todo o boost em uma única jogada, pois ficar sem boost te deixa extremamente vulnerável. O ideal é sempre manter entre 20 e 50 de boost.
-
-Além disso, a paciência é sua maior arma. Muitos jogadores perdem porque forçam jogadas desnecessárias. Em vez disso, espere o erro do adversário e capitalize em cima disso. Trabalhe bastante o controle de bola no carro (dribble), pois isso permite criar jogadas mais seguras e imprevisíveis.
-
-Outro ponto importante é a defesa. Aprenda a fazer shadow defense (defesa acompanhando o adversário) para não se comprometer cedo demais. Nunca pule sem ter certeza, porque um pulo errado praticamente garante o gol inimigo.</p>
+<img src="https://img.youtube.com/vi/IjVMZaXXDEM/maxresdefault.jpg">
+<p>No modo 1v1, tudo gira em torno de consistência e controle mental. Cada erro pode custar um gol, então jogar com calma é essencial. Muitos jogadores perdem por ansiedade, tentando forçar jogadas ao invés de esperar o momento certo.</p>
+<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
+<p>Gerenciar boost é outra parte fundamental. Jogar com pouco boost te força a ser mais inteligente e eficiente. Sempre tente manter controle da bola e evitar jogadas desesperadas.</p>
 </div>
 
 <div id="v2" class="page">
 <div class="back" onclick="voltar()">⬅ Voltar</div>
 <h2>Guia Completo 2v2</h2>
-<p>O 2v2 é o modo mais jogado e depende muito de rotação e confiança no teammate. O erro mais comum, principalmente no Platina, é o commit duplo — quando os dois jogadores vão na mesma bola. Isso quebra completamente a defesa.
-
-A regra básica é: se seu teammate foi, você fica. Sempre pense em cobrir ele. Quando estiver sozinho na defesa, jogue seguro e evite arriscar desafios desnecessários.
-
-Outra coisa essencial é o posicionamento. Fique sempre em uma posição onde você consiga reagir rápido, sem ficar muito perto nem muito longe. Controle de boost também é importante — não saia pegando todos os boosts grandes, use pads pequenos durante a rotação.
-
-Se você dominar rotação básica e evitar erros simples, você já sobe de rank facilmente.</p>
+<img src="https://rocketleague.media.zestyio.com/rl_s4_2v2.jpg">
+<p>O 2v2 é o modo mais estratégico. O erro mais comum é o commit duplo, onde dois jogadores vão na mesma bola. Isso deixa o gol completamente aberto.</p>
+<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420">
+<p>Rotação é tudo. Se seu teammate foi, você cobre. Jogar seguro já te coloca acima da maioria dos jogadores do Platina.</p>
 </div>
 
 <div id="v3" class="page">
 <div class="back" onclick="voltar()">⬅ Voltar</div>
 <h2>Guia Completo 3v3</h2>
-<p>No 3v3, o mais importante é posicionamento. Sempre deve existir um "terceiro homem" atrás, garantindo a defesa caso algo dê errado. Se todos avançam, o time fica completamente exposto.
-
-Evite ballchase a todo custo. Cada jogador tem sua vez na jogada. Confie nos seus teammates e não tente resolver tudo sozinho.
-
-A rotação aqui é mais estruturada: quem ataca sai pela lateral e volta por trás, permitindo que outro jogador entre na jogada. Manter essa organização faz uma diferença enorme.
-
-Comunicação (mesmo que só por leitura de jogo) também é essencial. Observe o movimento dos aliados e jogue de acordo com isso.</p>
+<img src="https://matcherino.com/assets/images/og-image.png">
+<p>No 3v3, organização é a chave. Sempre deve existir um jogador mais recuado garantindo a defesa.</p>
+<img src="https://images.unsplash.com/photo-1508098682722-e99c643e7485">
+<p>Evite ballchase e jogue em equipe. A rotação correta faz toda diferença.</p>
 </div>
 
 <div id="flick" class="page">
 <div class="back" onclick="voltar()">⬅ Voltar</div>
 <h2>Guia Completo de Flick</h2>
-<p>O flick é uma das mecânicas mais importantes para criar jogadas ofensivas. Para executar corretamente, você precisa primeiro dominar o controle de bola no carro. Sem isso, o flick não sai consistente.
-
-O flick diagonal é um dos mais eficientes, pois gera mais força e direção imprevisível. Evite flickar muito cedo — espere o momento certo, geralmente quando o adversário está vindo te desafiar.
-
-Treinar no freeplay é essencial. Passe tempo apenas controlando a bola no topo do carro antes de tentar flickar. Com prática, isso se torna natural e extremamente forte em partidas reais.</p>
+<img src="https://img.youtube.com/vi/jVzlmApbD8M/maxresdefault.jpg">
+<p>O flick é essencial para ataque. Dominar a bola no carro é o primeiro passo para executar com consistência.</p>
+<img src="https://images.unsplash.com/photo-1517649763962-0c623066013b">
+<p>Use flicks diagonais para maior potência e imprevisibilidade.</p>
 </div>
 
 <div id="aereo" class="page">
 <div class="back" onclick="voltar()">⬅ Voltar</div>
 <h2>Guia Completo de Aéreo</h2>
-<p>O aéreo é fundamental para competir em níveis mais altos. O principal erro dos jogadores é usar boost demais e perder o controle do carro. O ideal é usar pequenos toques de boost e fazer ajustes suaves.
-
-Antes de tentar jogadas rápidas, foque na consistência. Acertar a bola com precisão é mais importante do que velocidade.
-
-Treine no freeplay e em mapas de treino específicos. Comece com bolas paradas e evolua para bolas em movimento. Aprender a ler a trajetória da bola faz toda diferença.
-
-Outro ponto importante é o posicionamento antes do salto. Um bom aéreo começa no chão, com um bom alinhamento do carro.</p>
+<img src="https://bo3.gg/uploads/articles/rocket-league-cars.jpg">
+<p>O aéreo é essencial para subir de nível. Controle no ar é mais importante que velocidade.</p>
+<img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6">
+<p>Treine consistência antes de tentar jogadas avançadas.</p>
 </div>
 
 <script>
