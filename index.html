@@ -8,12 +8,11 @@
 body {font-family: Arial; background:#0f172a; color:white; margin:0;}
 header {padding:20px; font-size:28px; text-align:center; font-weight:bold;}
 .container {display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:25px; padding:30px;}
-.card {background:#1e293b; padding:40px 20px; border-radius:20px; cursor:pointer; transition:0.3s; text-align:center;}
+.card {background:#1e293b; padding:50px 20px; border-radius:20px; cursor:pointer; transition:0.3s; text-align:center;}
 .card:hover {transform:scale(1.08); background:#334155;}
-.card img {width:60px; margin-bottom:15px;}
-.page {display:none; padding:30px;}
+.card img {width:80px; margin-bottom:15px;}
+.page {display:none; padding:40px; max-width:900px; margin:auto; line-height:1.8;}
 .back {margin-bottom:20px; display:inline-block; cursor:pointer; color:#22c55e;}
-.book {background:#1e293b; padding:25px; border-radius:15px; line-height:1.6; text-align:left; max-width:700px; margin:auto;}
 </style>
 </head>
 <body>
@@ -44,9 +43,9 @@ header {padding:20px; font-size:28px; text-align:center; font-weight:bold;}
 <h3>Flick</h3>
 </div>
 
-<div class="card" onclick="abrir('aerial')">
+<div class="card" onclick="abrir('aereo')">
 <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png">
-<h3>Aerial</h3>
+<h3>Aéreo</h3>
 </div>
 
 </div>
@@ -56,52 +55,58 @@ header {padding:20px; font-size:28px; text-align:center; font-weight:bold;}
 
 <div id="v1" class="page">
 <div class="back" onclick="voltar()">⬅ Voltar</div>
-<div class="book">
-<h2>Guia 1v1</h2>
-<p><b>Controle emocional:</b> No 1v1, qualquer erro vira gol. Mantenha calma.</p>
-<p><b>Boost:</b> Nunca gaste tudo de uma vez. Jogue com pouco boost.</p>
-<p><b>Paciência:</b> Espere o erro do inimigo, não force jogadas.</p>
-</div>
+<h2>Guia Completo 1v1</h2>
+<p>No modo 1v1, o foco principal é consistência e controle emocional. Diferente dos outros modos, qualquer erro seu vira uma chance clara de gol para o adversário. Por isso, jogar com calma é essencial. Evite gastar todo o boost em uma única jogada, pois ficar sem boost te deixa extremamente vulnerável. O ideal é sempre manter entre 20 e 50 de boost.
+
+Além disso, a paciência é sua maior arma. Muitos jogadores perdem porque forçam jogadas desnecessárias. Em vez disso, espere o erro do adversário e capitalize em cima disso. Trabalhe bastante o controle de bola no carro (dribble), pois isso permite criar jogadas mais seguras e imprevisíveis.
+
+Outro ponto importante é a defesa. Aprenda a fazer shadow defense (defesa acompanhando o adversário) para não se comprometer cedo demais. Nunca pule sem ter certeza, porque um pulo errado praticamente garante o gol inimigo.</p>
 </div>
 
 <div id="v2" class="page">
 <div class="back" onclick="voltar()">⬅ Voltar</div>
-<div class="book">
-<h2>Guia 2v2</h2>
-<p><b>Rotação:</b> Sempre respeite a vez do seu teammate.</p>
-<p><b>Erro comum:</b> Dar commit duplo.</p>
-<p><b>Dica:</b> Jogue mais seguro quando estiver sozinho.</p>
-</div>
+<h2>Guia Completo 2v2</h2>
+<p>O 2v2 é o modo mais jogado e depende muito de rotação e confiança no teammate. O erro mais comum, principalmente no Platina, é o commit duplo — quando os dois jogadores vão na mesma bola. Isso quebra completamente a defesa.
+
+A regra básica é: se seu teammate foi, você fica. Sempre pense em cobrir ele. Quando estiver sozinho na defesa, jogue seguro e evite arriscar desafios desnecessários.
+
+Outra coisa essencial é o posicionamento. Fique sempre em uma posição onde você consiga reagir rápido, sem ficar muito perto nem muito longe. Controle de boost também é importante — não saia pegando todos os boosts grandes, use pads pequenos durante a rotação.
+
+Se você dominar rotação básica e evitar erros simples, você já sobe de rank facilmente.</p>
 </div>
 
 <div id="v3" class="page">
 <div class="back" onclick="voltar()">⬅ Voltar</div>
-<div class="book">
-<h2>Guia 3v3</h2>
-<p><b>Posicionamento:</b> Sempre tenha um terceiro homem atrás.</p>
-<p><b>Equipe:</b> Confie nos teammates.</p>
-<p><b>Erro comum:</b> Ballchase.</p>
-</div>
+<h2>Guia Completo 3v3</h2>
+<p>No 3v3, o mais importante é posicionamento. Sempre deve existir um "terceiro homem" atrás, garantindo a defesa caso algo dê errado. Se todos avançam, o time fica completamente exposto.
+
+Evite ballchase a todo custo. Cada jogador tem sua vez na jogada. Confie nos seus teammates e não tente resolver tudo sozinho.
+
+A rotação aqui é mais estruturada: quem ataca sai pela lateral e volta por trás, permitindo que outro jogador entre na jogada. Manter essa organização faz uma diferença enorme.
+
+Comunicação (mesmo que só por leitura de jogo) também é essencial. Observe o movimento dos aliados e jogue de acordo com isso.</p>
 </div>
 
 <div id="flick" class="page">
 <div class="back" onclick="voltar()">⬅ Voltar</div>
-<div class="book">
-<h2>Guia de Flick</h2>
-<p><b>Controle:</b> Domine a bola antes de flickar.</p>
-<p><b>Execução:</b> Use flick diagonal.</p>
-<p><b>Treino:</b> Pratique no freeplay diariamente.</p>
-</div>
+<h2>Guia Completo de Flick</h2>
+<p>O flick é uma das mecânicas mais importantes para criar jogadas ofensivas. Para executar corretamente, você precisa primeiro dominar o controle de bola no carro. Sem isso, o flick não sai consistente.
+
+O flick diagonal é um dos mais eficientes, pois gera mais força e direção imprevisível. Evite flickar muito cedo — espere o momento certo, geralmente quando o adversário está vindo te desafiar.
+
+Treinar no freeplay é essencial. Passe tempo apenas controlando a bola no topo do carro antes de tentar flickar. Com prática, isso se torna natural e extremamente forte em partidas reais.</p>
 </div>
 
-<div id="aerial" class="page">
+<div id="aereo" class="page">
 <div class="back" onclick="voltar()">⬅ Voltar</div>
-<div class="book">
-<h2>Guia de Aerial</h2>
-<p><b>Controle:</b> Ajuste seu carro no ar com calma.</p>
-<p><b>Boost:</b> Use pouco e com precisão.</p>
-<p><b>Treino:</b> Foque em consistência, não velocidade.</p>
-</div>
+<h2>Guia Completo de Aéreo</h2>
+<p>O aéreo é fundamental para competir em níveis mais altos. O principal erro dos jogadores é usar boost demais e perder o controle do carro. O ideal é usar pequenos toques de boost e fazer ajustes suaves.
+
+Antes de tentar jogadas rápidas, foque na consistência. Acertar a bola com precisão é mais importante do que velocidade.
+
+Treine no freeplay e em mapas de treino específicos. Comece com bolas paradas e evolua para bolas em movimento. Aprender a ler a trajetória da bola faz toda diferença.
+
+Outro ponto importante é o posicionamento antes do salto. Um bom aéreo começa no chão, com um bom alinhamento do carro.</p>
 </div>
 
 <script>
@@ -119,4 +124,3 @@ function voltar(){
 
 </body>
 </html>
-
