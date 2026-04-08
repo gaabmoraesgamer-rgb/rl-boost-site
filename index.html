@@ -3,85 +3,121 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RL Boost - Dicas de Rocket League</title>
+<title>RL Boost</title>
 <style>
-body {font-family: Arial; background:#0f172a; color:white; text-align:center;}
-header {padding:20px; font-size:28px; font-weight:bold;}
-.container {display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:20px; padding:20px;}
-.card {background:#1e293b; padding:20px; border-radius:15px; cursor:pointer; transition:0.3s;}
-.card:hover {transform:scale(1.05); background:#334155;}
-.hidden {display:none;}
-button {padding:10px 20px; border:none; border-radius:10px; background:#22c55e; color:white; cursor:pointer; margin-top:10px;}
+body {font-family: Arial; background:#0f172a; color:white; margin:0;}
+header {padding:20px; font-size:28px; text-align:center; font-weight:bold;}
+.container {display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:25px; padding:30px;}
+.card {background:#1e293b; padding:40px 20px; border-radius:20px; cursor:pointer; transition:0.3s; text-align:center;}
+.card:hover {transform:scale(1.08); background:#334155;}
+.card img {width:60px; margin-bottom:15px;}
+.page {display:none; padding:30px;}
+.back {margin-bottom:20px; display:inline-block; cursor:pointer; color:#22c55e;}
+.book {background:#1e293b; padding:25px; border-radius:15px; line-height:1.6; text-align:left; max-width:700px; margin:auto;}
 </style>
 </head>
 <body>
 
 <header>RL Boost ⚽</header>
 
-<h2>Modos de Jogo</h2>
+<div id="menu">
+<h2 style="text-align:center">Escolha um Guia</h2>
 <div class="container">
-  <div class="card" onclick="mostrar('umv1')">1v1</div>
-  <div class="card" onclick="mostrar('doisv2')">2v2</div>
-  <div class="card" onclick="mostrar('tresv3')">3v3</div>
+
+<div class="card" onclick="abrir('v1')">
+<img src="https://cdn-icons-png.flaticon.com/512/833/833472.png">
+<h3>1v1</h3>
 </div>
 
-<h2>Mecânicas</h2>
-<div class="container">
-  <div class="card" onclick="mostrar('flick')">Flick</div>
-  <div class="card" onclick="mostrar('aerial')">Aerial</div>
-  <div class="card" onclick="mostrar('defesa')">Defesa</div>
+<div class="card" onclick="abrir('v2')">
+<img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png">
+<h3>2v2</h3>
 </div>
 
-<div id="umv1" class="hidden">
+<div class="card" onclick="abrir('v3')">
+<img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png">
+<h3>3v3</h3>
+</div>
+
+<div class="card" onclick="abrir('flick')">
+<img src="https://cdn-icons-png.flaticon.com/512/2972/2972185.png">
+<h3>Flick</h3>
+</div>
+
+<div class="card" onclick="abrir('aerial')">
+<img src="https://cdn-icons-png.flaticon.com/512/854/854878.png">
+<h3>Aerial</h3>
+</div>
+
+</div>
+</div>
+
+<!-- PÁGINAS -->
+
+<div id="v1" class="page">
+<div class="back" onclick="voltar()">⬅ Voltar</div>
+<div class="book">
 <h2>Guia 1v1</h2>
-<p>• Jogue mais defensivo
-• Controle o boost
-• Force erro do inimigo</p>
+<p><b>Controle emocional:</b> No 1v1, qualquer erro vira gol. Mantenha calma.</p>
+<p><b>Boost:</b> Nunca gaste tudo de uma vez. Jogue com pouco boost.</p>
+<p><b>Paciência:</b> Espere o erro do inimigo, não force jogadas.</p>
+</div>
 </div>
 
-<div id="doisv2" class="hidden">
+<div id="v2" class="page">
+<div class="back" onclick="voltar()">⬅ Voltar</div>
+<div class="book">
 <h2>Guia 2v2</h2>
-<p>• Nunca dê commit duplo
-• Rotação é essencial
-• Confie no teammate</p>
+<p><b>Rotação:</b> Sempre respeite a vez do seu teammate.</p>
+<p><b>Erro comum:</b> Dar commit duplo.</p>
+<p><b>Dica:</b> Jogue mais seguro quando estiver sozinho.</p>
+</div>
 </div>
 
-<div id="tresv3" class="hidden">
+<div id="v3" class="page">
+<div class="back" onclick="voltar()">⬅ Voltar</div>
+<div class="book">
 <h2>Guia 3v3</h2>
-<p>• Sempre mantenha posição
-• Jogue em equipe
-• Evite ballchase</p>
+<p><b>Posicionamento:</b> Sempre tenha um terceiro homem atrás.</p>
+<p><b>Equipe:</b> Confie nos teammates.</p>
+<p><b>Erro comum:</b> Ballchase.</p>
+</div>
 </div>
 
-<div id="flick" class="hidden">
+<div id="flick" class="page">
+<div class="back" onclick="voltar()">⬅ Voltar</div>
+<div class="book">
 <h2>Guia de Flick</h2>
-<p>• Controle a bola no carro
-• Use diagonal flick
-• Treine no freeplay</p>
+<p><b>Controle:</b> Domine a bola antes de flickar.</p>
+<p><b>Execução:</b> Use flick diagonal.</p>
+<p><b>Treino:</b> Pratique no freeplay diariamente.</p>
+</div>
 </div>
 
-<div id="aerial" class="hidden">
+<div id="aerial" class="page">
+<div class="back" onclick="voltar()">⬅ Voltar</div>
+<div class="book">
 <h2>Guia de Aerial</h2>
-<p>• Ajuste no ar com calma
-• Use pouco boost
-• Treine consistência</p>
+<p><b>Controle:</b> Ajuste seu carro no ar com calma.</p>
+<p><b>Boost:</b> Use pouco e com precisão.</p>
+<p><b>Treino:</b> Foque em consistência, não velocidade.</p>
 </div>
-
-<div id="defesa" class="hidden">
-<h2>Guia de Defesa</h2>
-<p>• Aprenda shadow defense
-• Não pule cedo
-• Posicionamento é tudo</p>
 </div>
 
 <script>
-function mostrar(id){
-  let sections = document.querySelectorAll('.hidden');
-  sections.forEach(sec => sec.style.display = 'none');
-  document.getElementById(id).style.display = 'block';
+function abrir(id){
+ document.getElementById('menu').style.display = 'none';
+ document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+ document.getElementById(id).style.display = 'block';
+}
+
+function voltar(){
+ document.getElementById('menu').style.display = 'block';
+ document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
 }
 </script>
 
 </body>
 </html>
+
 
