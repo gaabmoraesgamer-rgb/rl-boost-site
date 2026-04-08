@@ -4,47 +4,104 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RL Boost</title>
+
 <style>
-body {font-family: Arial; background:#0f172a; color:white; margin:0;}
-header {padding:20px; font-size:28px; text-align:center; font-weight:bold;}
-.container {display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:30px; padding:30px;}
-.card {background:#1e293b; padding:20px; border-radius:20px; cursor:pointer; transition:0.3s; text-align:center;}
-.card:hover {transform:scale(1.05); background:#334155;}
-.card img {width:100%; height:180px; object-fit:cover; border-radius:15px; margin-bottom:15px;}
-.page {display:none; padding:40px; max-width:900px; margin:auto; line-height:1.9; font-size:18px;}
-.page img {width:100%; height:auto; border-radius:15px; margin:30px 0;}
-.back {margin-bottom:20px; display:inline-block; cursor:pointer; color:#22c55e;}
+body {
+    margin:0;
+    font-family: Arial;
+    background:#0f172a;
+    color:white;
+}
+
+header {
+    text-align:center;
+    padding:20px;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.container {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:30px;
+    padding:30px;
+}
+
+.card {
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.card:hover {
+    transform:scale(1.05);
+}
+
+.card img {
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card h3 {
+    text-align:center;
+    padding:15px;
+}
+
+.page {
+    display:none;
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+    font-size:18px;
+    line-height:1.9;
+}
+
+.page img {
+    width:100%;
+    border-radius:15px;
+    margin:25px 0;
+}
+
+.back {
+    cursor:pointer;
+    color:#22c55e;
+    margin-bottom:20px;
+    display:inline-block;
+}
 </style>
+
 </head>
 <body>
 
 <header>RL Boost ⚽</header>
 
 <div id="menu">
-<h2 style="text-align:center">Escolha um Guia</h2>
 <div class="container">
 
-<div class="card" onclick="abrir('v1')">
+<div class="card" onclick="openPage('v1')">
 <img src="https://img.youtube.com/vi/IjVMZaXXDEM/maxresdefault.jpg">
 <h3>1v1</h3>
 </div>
 
-<div class="card" onclick="abrir('v2')">
+<div class="card" onclick="openPage('v2')">
 <img src="https://rocketleague.media.zestyio.com/rl_s4_2v2.jpg">
 <h3>2v2</h3>
 </div>
 
-<div class="card" onclick="abrir('v3')">
+<div class="card" onclick="openPage('v3')">
 <img src="https://matcherino.com/assets/images/og-image.png">
 <h3>3v3</h3>
 </div>
 
-<div class="card" onclick="abrir('flick')">
+<div class="card" onclick="openPage('flick')">
 <img src="https://img.youtube.com/vi/jVzlmApbD8M/maxresdefault.jpg">
 <h3>Flick</h3>
 </div>
 
-<div class="card" onclick="abrir('aereo')">
+<div class="card" onclick="openPage('aereo')">
 <img src="https://bo3.gg/uploads/articles/rocket-league-cars.jpg">
 <h3>Aéreo</h3>
 </div>
@@ -52,71 +109,128 @@ header {padding:20px; font-size:28px; text-align:center; font-weight:bold;}
 </div>
 </div>
 
+<!-- PÁGINAS -->
+
 <div id="v1" class="page">
-<div class="back" onclick="voltar()">⬅ Voltar</div>
-<h2>Guia Completo 1v1</h2>
+<div class="back" onclick="goBack()">⬅ Voltar</div>
+<h2>Guia 1v1</h2>
+
 <img src="https://img.youtube.com/vi/IjVMZaXXDEM/maxresdefault.jpg">
-<p>No modo 1v1, tudo depende exclusivamente de você, o que torna esse modo um dos mais difíceis e ao mesmo tempo mais importantes para evolução. Aqui, cada erro seu vira uma oportunidade direta para o adversário marcar gol, então a consistência é muito mais importante do que tentar jogadas difíceis. Muitos jogadores ficam presos porque jogam com pressa, tentando atacar o tempo todo sem pensar. O ideal é controlar o ritmo da partida, observar o adversário e punir os erros dele com calma e precisão, ao invés de se expor desnecessariamente.</p>
-<p>Outro ponto extremamente importante é o controle de boost. Jogar 1v1 não é sobre pegar todos os boosts grandes, mas sim saber usar bem o pouco que você tem. Muitas vezes, ficar com 30 de boost e manter a pressão é melhor do que sair da jogada para pegar 100 e deixar o adversário livre. Além disso, aprender a defender corretamente, usando shadow defense, é algo que separa jogadores bons de jogadores medianos nesse modo.</p>
+
+<p>O 1v1 é o modo mais difícil e mais importante para evolução...</p>
+<p>Aqui cada erro vira gol, então jogar com calma é essencial...</p>
+<p>Controle de boost é fundamental...</p>
+<p>Não jogue com pressa, jogue com inteligência...</p>
+<p>Aprenda a punir erros do adversário...</p>
+
 <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
-<p>Também é essencial melhorar seu controle de bola. Quanto mais confortável você estiver com a bola no carro, mais opções você vai ter durante a partida. Isso inclui dribles, mudanças rápidas de direção e controle próximo ao chão. Jogadores que dominam isso conseguem criar jogadas mesmo em situações difíceis, enquanto jogadores sem controle acabam entregando a bola facilmente.</p>
-<p>Por fim, o mental é o fator mais importante no 1v1. Você vai errar, vai tomar gols bobos e isso faz parte do processo. O que diferencia quem sobe de rank é a capacidade de continuar jogando bem mesmo depois de errar. Se você conseguir manter a calma, jogar simples e evitar tilt, sua evolução nesse modo vai ser absurda comparada aos outros.</p>
+
+<p>Treine controle de bola constantemente...</p>
+<p>Evite jogadas desnecessárias...</p>
+<p>Use dribles com calma...</p>
+<p>Seja imprevisível...</p>
+<p>Controle emocional é tudo...</p>
+
 </div>
 
 <div id="v2" class="page">
-<div class="back" onclick="voltar()">⬅ Voltar</div>
-<h2>Guia Completo 2v2</h2>
+<div class="back" onclick="goBack()">⬅ Voltar</div>
+<h2>Guia 2v2</h2>
+
 <img src="https://rocketleague.media.zestyio.com/rl_s4_2v2.jpg">
-<p>O 2v2 é considerado por muitos o modo mais equilibrado do jogo, pois mistura mecânica individual com trabalho em equipe. Aqui, o erro mais comum é o famoso “double commit”, onde os dois jogadores vão na mesma bola e deixam o gol completamente aberto. Evitar esse tipo de erro já te coloca acima de grande parte dos jogadores, principalmente nos ranks médios como Platina e Diamante.</p>
-<p>Uma das coisas mais importantes no 2v2 é a rotação. Sempre que seu teammate estiver pressionando, você deve estar preparado para cobrir. Isso não significa jogar passivo, mas sim inteligente. Saber quando avançar e quando recuar é o que define partidas nesse modo. Jogadores que rotacionam bem acabam sendo muito mais consistentes ao longo do tempo.</p>
+
+<p>O 2v2 é o modo mais jogado...</p>
+<p>Evite double commit...</p>
+<p>Rotação é essencial...</p>
+<p>Leia seu teammate...</p>
+<p>Jogue seguro...</p>
+
 <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420">
-<p>Além disso, comunicação indireta é essencial. Mesmo sem usar chat ou voz, você consegue prever o que seu teammate vai fazer observando a posição dele. Se ele está avançando, você segura. Se ele recua, você pressiona. Esse tipo de leitura é algo que melhora com o tempo, mas já pode ser treinado desde cedo.</p>
-<p>Outro ponto forte é saber jogar seguro. Nem toda bola precisa virar ataque. Às vezes, o melhor que você pode fazer é apenas manter a posse e esperar o erro do adversário. Jogadores que entendem isso acabam subindo de rank mais rápido, porque cometem menos erros graves durante a partida.</p>
+
+<p>Não precisa atacar sempre...</p>
+<p>Espere o erro do adversário...</p>
+<p>Posicionamento vence partidas...</p>
+<p>Consistência é mais importante que mecânica...</p>
+<p>Jogue inteligente...</p>
+
 </div>
 
 <div id="v3" class="page">
-<div class="back" onclick="voltar()">⬅ Voltar</div>
-<h2>Guia Completo 3v3</h2>
+<div class="back" onclick="goBack()">⬅ Voltar</div>
+<h2>Guia 3v3</h2>
+
 <img src="https://matcherino.com/assets/images/og-image.png">
-<p>No modo 3v3, o foco principal é o trabalho em equipe. Diferente dos outros modos, aqui você depende muito mais da organização do time do que da sua habilidade individual. Cada jogador precisa entender seu papel dentro da rotação para evitar erros que podem custar gols fáceis.</p>
-<p>A rotação em triângulo é a base do 3v3. Enquanto um jogador pressiona, outro fica no meio e o terceiro garante a defesa. Esse sistema evita que o time fique exposto e mantém a pressão constante no adversário. Jogadores que ignoram isso acabam causando confusão e abrindo espaço para contra-ataques.</p>
+
+<p>No 3v3 o foco é equipe...</p>
+<p>Use rotação correta...</p>
+<p>Evite ballchase...</p>
+<p>Confie no time...</p>
+<p>Se posicione bem...</p>
+
 <img src="https://images.unsplash.com/photo-1508098682722-e99c643e7485">
-<p>Evitar o famoso “ballchase” também é fundamental. Correr atrás da bola o tempo todo não ajuda o time e muitas vezes piora a situação. O ideal é confiar nos seus teammates e ocupar espaços úteis dentro do campo, criando opções de passe e defesa.</p>
-<p>Por fim, o 3v3 é o modo onde posicionamento vale mais que mecânica. Você não precisa fazer jogadas incríveis o tempo todo, mas sim estar no lugar certo na hora certa. Isso sozinho já te coloca à frente de muitos jogadores que focam apenas em mecânicas difíceis.</p>
+
+<p>Não precisa de mecânica absurda...</p>
+<p>Jogue simples...</p>
+<p>Fique na posição certa...</p>
+<p>Evite erros básicos...</p>
+<p>Jogue pelo time...</p>
+
 </div>
 
 <div id="flick" class="page">
-<div class="back" onclick="voltar()">⬅ Voltar</div>
-<h2>Guia Completo de Flick</h2>
+<div class="back" onclick="goBack()">⬅ Voltar</div>
+<h2>Guia Flick</h2>
+
 <img src="https://img.youtube.com/vi/jVzlmApbD8M/maxresdefault.jpg">
-<p>O flick é uma das mecânicas mais importantes para qualquer jogador que quer melhorar no ataque. Ele permite que você transforme um controle de bola simples em uma finalização rápida e difícil de defender. Dominar essa técnica pode mudar completamente o seu desempenho em partidas.</p>
-<p>O primeiro passo para aprender flick é ter controle da bola no carro. Sem isso, qualquer tentativa vai ser inconsistente. Treinar dribles no modo livre ajuda muito nesse processo, pois aumenta sua confiança e precisão durante o jogo.</p>
+
+<p>Flick é essencial no ataque...</p>
+<p>Controle de bola primeiro...</p>
+<p>Treine no freeplay...</p>
+<p>Use diferentes tipos de flick...</p>
+<p>Seja imprevisível...</p>
+
 <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b">
-<p>Existem vários tipos de flick, como o frontal, diagonal e 45 graus. Cada um tem sua utilidade dependendo da situação. Flicks diagonais, por exemplo, são mais difíceis de prever e geralmente mais fortes, sendo ideais para surpreender o adversário.</p>
-<p>Com o tempo, você vai aprender quando usar cada tipo de flick. O segredo é não usar sempre o mesmo padrão, pois isso facilita a defesa do adversário. Variar suas jogadas torna você muito mais imprevisível e perigoso dentro de campo.</p>
+
+<p>Não repita sempre o mesmo movimento...</p>
+<p>Adapte ao jogo...</p>
+<p>Use timing certo...</p>
+<p>Pratique bastante...</p>
+<p>Domine a mecânica...</p>
+
 </div>
 
 <div id="aereo" class="page">
-<div class="back" onclick="voltar()">⬅ Voltar</div>
-<h2>Guia Completo de Aéreo</h2>
+<div class="back" onclick="goBack()">⬅ Voltar</div>
+<h2>Guia Aéreo</h2>
+
 <img src="https://bo3.gg/uploads/articles/rocket-league-cars.jpg">
-<p>O aéreo é uma das habilidades mais importantes no Rocket League, principalmente em ranks mais altos. Ele permite que você alcance bolas que outros jogadores não conseguem, criando oportunidades tanto no ataque quanto na defesa.</p>
-<p>O mais importante no início não é velocidade, mas sim controle. Muitos jogadores tentam ir rápido demais e acabam errando a bola completamente. Treinar movimentos básicos no ar ajuda a construir uma base sólida.</p>
+
+<p>Aéreo é essencial para subir de rank...</p>
+<p>Controle > velocidade...</p>
+<p>Treine base primeiro...</p>
+<p>Se alinhe antes de subir...</p>
+<p>Seja consistente...</p>
+
 <img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6">
-<p>Outra parte importante é o posicionamento antes de subir. Estar bem alinhado com a bola facilita muito o contato e aumenta sua precisão. Pequenos ajustes no chão fazem uma grande diferença no resultado final da jogada.</p>
-<p>Com prática, você vai conseguir fazer jogadas mais avançadas, como redirects e double touches. Mas tudo começa com consistência. Focar no básico e repetir os movimentos é o caminho mais rápido para evoluir nessa mecânica.</p>
+
+<p>Depois evolua para jogadas avançadas...</p>
+<p>Não pule tudo...</p>
+<p>Escolha bem suas bolas...</p>
+<p>Treine todos os dias...</p>
+<p>Consistência é chave...</p>
+
 </div>
 
 <script>
-function abrir(id){
- document.getElementById('menu').style.display = 'none';
- document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
- document.getElementById(id).style.display = 'block';
+function openPage(id){
+    document.getElementById("menu").style.display="none";
+    document.querySelectorAll(".page").forEach(p=>p.style.display="none");
+    document.getElementById(id).style.display="block";
 }
 
-function voltar(){
- document.getElementById('menu').style.display = 'block';
- document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+function goBack(){
+    document.getElementById("menu").style.display="block";
+    document.querySelectorAll(".page").forEach(p=>p.style.display="none");
 }
 </script>
 
